@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <link rel="stylesheet" href="./style/template.css">
+    <script src="./script/burgerMenu.js"></script>
 </head>
 <body>
 
@@ -12,13 +13,22 @@
 
     <header aria-label="header">
         <div class="header-wrapper">
-            <div class="header-logo"><img src="./images/apple.plus.jpg" alt="header-logo"></div>
-            <nav class="header-nav" aria-label="navigation">
+            <div class="burgerMenu-wrapper">
+                <div class="header-logo"><img src="./images/apple.plus.jpg" alt="header-logo"></div>
+                    <div class="burgerMenu" id="trigger">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            <nav class="header-nav" id="header-nav" aria-label="navigation">
                 <a href="#" class="nav-link">Features</a>
                 <a href="#" class="nav-link">Enterprise</a>
                 <a href="#" class="nav-link">Support</a>
                 <a href="#" class="nav-link">Pricing</a>
-                <button class="header-nav__button">Sign up</button>
+                <form action="./login.html">
+                    <button class="header-nav__button">Sign up</button>
+                </form>  
             </nav>
         </div>
     </header>
@@ -41,7 +51,9 @@
                         <li>Email support</li>
                         <li>Help center access</li>
                     </ul>
-                    <button class="offer-button">Sign up for free</button>
+                    <form action="./login.html">
+                        <button class="offer-button">Sign up for free</button>
+                    </form>
                 </div>
                 <div class="offer-card">
                     <div class="offer-heading">Pro</div>
@@ -54,7 +66,7 @@
                     </ul>
                     <button class="offer-button blue">Get started</button>
                 </div>
-                <div class="offer-card">
+                <div class="offer-card ent">
                     <div class="offer-heading">Enterprise</div>
                     <div class="offer-price">$29 / mo</div>
                     <ul class="offer-body">
